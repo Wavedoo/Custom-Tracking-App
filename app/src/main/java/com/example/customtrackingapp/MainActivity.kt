@@ -15,6 +15,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.customtrackingapp.components.DatePickerWithDate
+import com.example.customtrackingapp.components.LocationTextEntry
+import com.example.customtrackingapp.components.TimePickerWithTime
 import com.example.customtrackingapp.ui.theme.CustomTrackingAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,6 +24,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CustomTrackingAppTheme {
+                //TODO: Make the app
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize()) {
                     TestScreen()
@@ -34,7 +37,24 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun TestScreen(){
-    DatePickerWithDate()
+    Box(modifier = Modifier
+        .fillMaxSize()
+        .padding(16.dp)){
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                DatePickerWithDate("Start date")
+                DatePickerWithDate("End date")
+            }
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                TimePickerWithTime("Start time")
+                TimePickerWithTime("End time")
+            }
+            LocationTextEntry()
+        }
+
+    }
+
+
 }
 @Composable
 fun MainScreen(){
@@ -60,6 +80,6 @@ fun BowelMovementInput(){
 @Composable
 fun DefaultPreview() {
     CustomTrackingAppTheme {
-        Text("hi")
+        TestScreen()
     }
 }
