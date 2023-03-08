@@ -10,7 +10,7 @@ Note: In versions 0.1, 0.2, and 0.3 data is used to refer to bowel movements as 
 | Version | Update Title | Description |
 | --- | --- | ------ |
 | 0.0 | The beginning | No features will be implemented in version 0.0. |
-| 0.1 | Starting Looks | The app will have a basic  UI for tracking data but no functionality |
+| **0.1** | **Starting Looks** | **The app will have a basic  UI for tracking data but no functionality** |
 | 0.2 | Basic Functionality | The app will be have basic functionality that allows users to input |
 | 0.3 | Data Persistence | The app will have basic data persistence so the users can close to app and keep their data |
 | 0.4 | Custom Data Setup | The app will allow users to freely customize what they want to track |
